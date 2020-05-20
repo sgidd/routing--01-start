@@ -3,9 +3,13 @@ import './Blog.css';
 import Posts from '../Posts/Posts';
 import {Route, Link} from 'react-router-dom';
 import NewPost from '../NewPost/NewPost';
+import {withRouter} from 'react-router-dom';
 
 class Blog extends Component {
+
     render () {
+        console.log(this.props);
+        
         return (
             <div className="Blog">
                 <header >
