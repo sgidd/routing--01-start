@@ -7,6 +7,9 @@ import {withRouter} from 'react-router-dom';
 import FullPost from '../FullPost/FullPost';
 class Blog extends Component {
 
+    state ={
+        auth: false
+    }
     render () {
         console.log(this.props);
         
@@ -41,7 +44,7 @@ class Blog extends Component {
             <Route path="/posts/:id" component={FullPost} /> */}
 
             <Switch>
-                <Route path="/new-post" exact component={NewPost} />      
+               {this.state.auth ? <Route path="/new-post" exact component={NewPost} />  : null }      
                 <Route path="/posts"  component={Posts} />    
                 <Redirect from="/" to="/posts" />
                 {/* <Route path="/"  component={Posts} />  */}
