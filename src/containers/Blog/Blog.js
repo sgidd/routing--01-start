@@ -16,7 +16,7 @@ class Blog extends Component {
                     <nav>
                         <ul>
                             <li><NavLink 
-                            to="/" 
+                            to="/posts" 
                             exact
                             activeClassName="my-active" //it wont be applied as class not defined 
                             activeStyle={{
@@ -39,11 +39,10 @@ class Blog extends Component {
             {/*205 <Route path="/" exact    component={Posts} />
             <Route path="/new-post" exact component={NewPost} />
             <Route path="/posts/:id" component={FullPost} /> */}
-            
+
             <Switch>
-                <Route path="/" exact component={Posts} />
-                <Route path="/new-post" exact component={NewPost} />
-                <Route path="/:id" component={FullPost} />
+                <Route path="/new-post" exact component={NewPost} />      
+                <Route path="/posts"  component={Posts} />    
             </Switch>
             </div>
 
